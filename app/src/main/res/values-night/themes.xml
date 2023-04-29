@@ -2,21 +2,22 @@
     <!-- Base application theme. -->
     <style name="Theme.AlcoolOuGasolina" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#054047</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">#006064</item>
+        <item name="colorPrimaryVariant">#004D40</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#054047</item>
+        <item name="colorPrimaryDark">#004D40</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#CB584C</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">#FFA000</item>
+        <item name="colorSecondaryVariant">#FFC107</item>
+        <item name="colorOnSecondary">#212121</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">#054047</item>
+        <item name="android:statusBarColor">#004D40</item>
 
         <!-- Customize your theme here. -->
         <item name="android:textColorPrimary">#FFFFFF</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColorHint">#FFFFFF</item>
-        <item name="android:backgroundTint">#054047</item>
+        <item name="android:textColorHint">#BDBDBD</item>
+        <item name="android:backgroundTint">#212121</item>
     </style>
+
 </resources>
