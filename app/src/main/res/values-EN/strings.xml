@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="welcome_message">Welcome!</string>
+    <string name="button_text">Click Here</string>
+    <string name="gas_value_label">Gas value (R$):</string>
+    <string name="alcohol_value_label">Alcohol value (R$):</string>
+    <string name="percentage_text">The percentage of the alcohol value in relation to gasoline is:</string>
+    <string name="calculate_button_text">Calculate</string>
+    <string name="result_label">Result:</string>
+</resources>

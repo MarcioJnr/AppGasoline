@@ -8,149 +8,159 @@
     android:background="#87C4CB"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_layout"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:contentDescription="uma bomba de gasolina ilustrando o app"
-            android:padding="8dp"
-            android:scaleType="centerInside"
-            app:srcCompat="@mipmap/ic_launcher_foreground" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Qual combustível é melhor?"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="16dp" />
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/rounded_layout"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:padding="@dimen/padding_start_end"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/label_gasolina"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Valor da gasolina (R$):"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp"/>
-
-            <EditText
-                android:id="@+id/edit_gasolina"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:hint="Valor da gasolina em reais"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="16dp"/>
-
-            <TextView
-                android:id="@+id/label_alcool"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Valor do álcool (R$):"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp"/>
-
-            <EditText
-                android:id="@+id/edit_alcool"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:hint="Valor do álcool em reais"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="uma bomba de gasolina ilustrando o app"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A porcentagem do valor do álcool em relação à gasolina é:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp"/>
+                android:text="@string/welcome_message"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_start_end" />
 
-            <Switch
-                android:id="@+id/switch_porcentagem"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="70%"
-                android:textSize="18sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/label_gasolina"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/gas_value_label"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textSize="@dimen/text_size_small"
+                        android:paddingStart="@dimen/padding_start_end"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="@dimen/padding_top_bottom"
+                        android:paddingBottom="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edit_gasolina"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:hint="Valor da gasolina em reais"
+                        android:textSize="@dimen/text_size_small"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="@dimen/padding_start_end"
+                        android:paddingTop="@dimen/padding_top_bottom"
+                        android:paddingBottom="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/label_alcool"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/alcohol_value_label"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textSize="@dimen/text_size_small"
+                        android:paddingStart="@dimen/padding_start_end"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="@dimen/padding_top_bottom"
+                        android:paddingBottom="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edit_alcool"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:hint="Valor do álcool em reais"
+                        android:textSize="@dimen/text_size_small"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="@dimen/padding_start_end"
+                        android:paddingBottom="8dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textSize="@dimen/text_size_small"
+                    android:paddingStart="@dimen/padding_start_end"
+                    android:paddingEnd="@dimen/padding_start_end"
+                    android:paddingTop="@dimen/padding_top_bottom"
+                    android:paddingBottom="8dp"/>
+
+                <Switch
+                    android:id="@+id/switch_porcentagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70%"
+                    android:textSize="@dimen/text_size_small"
+                    android:paddingStart="@dimen/padding_start_end"
+                    android:paddingEnd="@dimen/padding_start_end"
+                    android:paddingBottom="16dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_calcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_button_text"
+                android:textSize="@dimen/text_size_medium"
+                android:backgroundTint="#FF5722"
+                android:layout_marginTop="16dp"
+                android:paddingStart="@dimen/padding_start_end"
+                android:paddingEnd="@dimen/padding_start_end"
                 android:paddingBottom="16dp"/>
 
+            <TextView
+                android:id="@+id/text_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/result_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/text_size_large"
+                android:paddingStart="@dimen/padding_start_end"
+                android:paddingEnd="@dimen/padding_start_end"
+                android:paddingTop="32dp"
+                android:paddingBottom="16dp"/>
 
         </LinearLayout>
-
-
-        <Button
-            android:id="@+id/button_calcular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Calcular"
-            android:textSize="18sp"
-            android:backgroundTint="#FF5722"
-            android:layout_marginTop="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp"/>
-
-        <TextView
-            android:id="@+id/text_resultado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Resultado: "
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="24sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="32dp"
-            android:paddingBottom="16dp"/>
-
-
-    </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

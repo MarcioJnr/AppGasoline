@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Com qual combustível?</string>
+    <string name="app_name">Meu Aplicativo</string>
+    <string name="welcome_message">Bem-vindo!</string>
+    <string name="button_text">Clique Aqui</string>
+    <string name="gas_value_label">Valor da gasolina (R$):</string>
+    <string name="alcohol_value_label">Valor do álcool (R$):</string>
+    <string name="percentage_text">A porcentagem do valor do álcool em relação à gasolina é:</string>
+    <string name="calculate_button_text">Calcular</string>
+    <string name="result_label">Resultado:</string>
 </resources>

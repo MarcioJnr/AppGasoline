@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamanho da tela - Nexus 10 (2560x1600) -->
+    <dimen name="text_size_large">36sp</dimen>
+    <dimen name="text_size_medium">24sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+    <dimen name="padding_start_end">32dp</dimen>
+    <dimen name="padding_top_bottom">16dp</dimen>
+</resources>
